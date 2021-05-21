@@ -1,4 +1,5 @@
 const express = require('express')
-const express = require('mysql');
+const mysql = require('mysql');
+const util = require('util');
 
 const app = express();
