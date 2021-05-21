@@ -1,0 +1,19 @@
+{
+  "name": "tp-u1-m4",
+  "version": "1.0.0",
+  "description": "Trabajo Practico Unidad 1 - Modulo 4 de la Diplomatura en programación web full stack con React JS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dvillano/TP-U1-M4.git"
+  },
+  "author": "Daniel Villano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dvillano/TP-U1-M4/issues"
+  },
+  "homepage": "https://github.com/Dvillano/TP-U1-M4#readme"
+}
