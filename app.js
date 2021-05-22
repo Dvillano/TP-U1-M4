@@ -12,7 +12,7 @@ const conexion = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'listacompras'
+    database: 'clases'
 });
 
 // Verificar si se pudo conectar a DB
@@ -25,6 +25,10 @@ conexion.connect( (error) => {
 });
 
 const qy = util.promisify(conexion.query).bind(conexion); // Permite el uso de async/await en la conexion mysql
+
+//Rutas
+const {} = require('./rutas/estudiante.js')
+const {} = require('./rutas/materia.js')
 
 
 // Servidor
