@@ -1,6 +1,6 @@
 const express = require('express')
 const mysql = require('mysql');
-const util = require('util');
+
 
 const app = express();
 const PORT = 3000;
@@ -20,16 +20,20 @@ conexion.connect( (error) => {
     if (error){
         throw error;
     }
-
     console.log('Conexion con la base de datos establecida');
 });
 
-const qy = util.promisify(conexion.query).bind(conexion); // Permite el uso de async/await en la conexion mysql
-
+exports.conexion = conexion;
 //Rutas
-const {} = require('./rutas/estudiante.js')
+const {getEstudiante, getEstudianteById, postEstudiante, putEstudianteById, deleteEstudiante} = require('./rutas/estudiante.js')
 const {} = require('./rutas/materia.js')
 
+//Rutas
+app.get('/estudiante', getEstudiante);
+app.get('/estudiante/:id', getEstudianteById);
+app.post('/estudiante', postEstudiante);
+app.put('/estudiante/:id', putEstudianteById);
+app.delete('/estudiante/:id', deleteEstudiante);
 
 // Servidor
 app.listen(PORT, () => {
